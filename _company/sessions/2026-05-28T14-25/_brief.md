@@ -1,0 +1,46 @@
+# 📋 작업 브리프
+
+**원 명령:** picto-lab-project/docs/picto-lab-direction.md 파일을 PICTO LAB의 최상위 기획 기준서로 사용해줘.
+
+기존 루트에 있는 PICTO_LAB_FINAL_SPEC.md, Project_Core_Summary.md보다 이 문서의 방향성을 우선해서 반영해줘.
+
+우선 MVP 1단계만 구현해줘:
+- 키워드 입력
+- 용도 선택
+- 스타일 선택
+- 후보 4개 표시
+- SVG 다운로드
+- PNG 다운로드
+
+로그인, 결제, 구독, 팀 기능, 관리자 페이지, 고급 추천 알고리즘은 아직 구현하지 마.
+
+## 요약
+유튜브 + 매출 데이터 같이 분석
+
+## 분배
+- **🔎 레오**: picto-lab-project/docs/picto-lab-direction.md 파일을 PICTO LAB의 최상위 기획 기준서로 사용해줘.
+
+기존 루트에 있는 PICTO_LAB_FINAL_SPEC.md, Project_Core_Summary.md보다 이 문서의 방향성을 우선해서 반영해줘.
+
+우선 MVP 1단계만 구현해줘:
+- 키워드 입력
+- 용도 선택
+- 스타일 선택
+- 후보 4개 표시
+- SVG 다운로드
+- PNG 다운로드
+
+로그인, 결제, 구독, 팀 기능, 관리자 페이지, 고급 추천 알고리즘은 아직 구현하지 마.
+- **💼 현빈**: picto-lab-project/docs/picto-lab-direction.md 파일을 PICTO LAB의 최상위 기획 기준서로 사용해줘.
+
+기존 루트에 있는 PICTO_LAB_FINAL_SPEC.md, Project_Core_Summary.md보다 이 문서의 방향성을 우선해서 반영해줘.
+
+우선 MVP 1단계만 구현해줘:
+- 키워드 입력
+- 용도 선택
+- 스타일 선택
+- 후보 4개 표시
+- SVG 다운로드
+- PNG 다운로드
+
+로그인, 결제, 구독, 팀 기능, 관리자 페이지, 고급 추천 알고리즘은 아직 구현하지 마.
