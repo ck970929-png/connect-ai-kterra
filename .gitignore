@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Connect AI auto-generated
 .DS_Store
 .obsidian/
@@ -7,3 +8,42 @@ node_modules/
 *.log
 .cache/
 Thumbs.db
+=======
+node_modules/
+out/
+*.vsix
+.vscode-test/
+preview.html
+.DS_Store
+releases/
+.env
+*.bak.*
+# Secrets / API keys
+.env.*
+*.key
+*.token
+*.pem
+*.p12
+*.pfx
+secrets.json
+**/secrets.json
+
+# Service config files
+telegram_setup.json
+**/telegram_setup.json
+paypal_setup.json
+**/paypal_setup.json
+openai_config.json
+**/openai_config.json
+law_config.json
+**/law_config.json
+config.local.json
+**/config.local.json
+
+# Runtime logs
+*.log
+planner.log
+
+# Local brain / generated data
+.connect-ai-brain/
+>>>>>>> origin/main
