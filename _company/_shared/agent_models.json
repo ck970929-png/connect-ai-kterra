@@ -5,7 +5,7 @@
   "designer": "qwen3:8b",
   "developer": "qwen3:8b",
   "business": "qwen3:8b",
-  "secretary": "gemma4:e4b",
+  "secretary": "qwen3:8b",
   "editor": "gemma4:e4b",
   "writer": "qwen3:8b",
   "researcher": "qwen3:8b"
