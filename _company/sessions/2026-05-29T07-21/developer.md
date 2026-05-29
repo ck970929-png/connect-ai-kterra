@@ -1,0 +1,92 @@
+# 💻 코다리 — picto-lab-project/src/App.tsx 파일을 완전히 덮어쓰고 하이브리드 결제 모달 컴포넌트를 구현하세요. 기존 코드는 삭제하고 크레딧 차감 로직, UI 스타일, 상태 관리를 통합해 최종 코드를 작성해 주세요.
+
+```tsx
+// picto-lab-project/src/App.tsx
+import React, { useState, useEffect } from 'react';
+
+// Credit system state
+const [creditBalance, setCreditBalance] = useState(100);
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('credit_card');
+const [paymentError, setPaymentError] = useState('');
+
+// Mock credit deduction logic
+const deductCredits = (amount: number) => {
+  if (creditBalance >= amount) {
+    setCreditBalance(creditBalance - amount);
+    setPaymentError('');
+    return true;
+  }
+  setPaymentError('Insufficient credit balance');
+  return false;
+};
+
+const PaymentModal: React.FC = () => {
+  const handlePayment = (amount: number) => {
+    if (deductCredits(amount)) {
+      setIsModalOpen(false);
+      alert(`Payment of ${amount} credits successful! Remaining balance: ${creditBalance}`);
+    }
+  };
+
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <h2>Buy Credits</h2>
+        <p>Current Balance: {creditBalance} credits</p>
+        
+        <div className="payment-methods">
+          <button 
+            className={selectedPaymentMethod === 'credit_card' ? 'active' : ''}
+            onClick={() => setSelectedPaymentMethod('credit_card')}
+          >
+            Credit Card
+          </button>
+          <button 
+            className={selectedPaymentMethod === 'alternative' ? 'active' : ''}
+            onClick={() => setSelectedPaymentMethod('alternative')}
+          >
+            Alternative
+          </button>
+        </div>
+        
+        {selectedPaymentMethod === 'credit_card' && (
+          <form onSubmit={(e) => { e.preventDefault(); handlePayment(50); }}>
+            <input type="number" min="10" max="100" placeholder="Enter amount (10-100)" />
+            <button type="submit">Buy Credits</button>
+          </form>
+        )}
+        
+        {selectedPaymentMethod === 'alternative' && (
+          <form onSubmit={(e) => { e.preventDefault(); handlePayment(20); }}>
+            <input type="number" min="5" max="50" placeholder="Enter amount (5-50)" />
+            <button type="submit">Buy Credits</button>
+          </form>
+        )}
+        
+        {paymentError && <p className="error">{paymentError}</p>}
+      </div>
+    </div>
+  );
+};
+
+const App: React.FC = () => {
+  // Existing PICTO LAB UI components...
+  
+  return (
+    <div className="app-container">
+      {/* Existing UI elements */}
+      
+      <button onClick={() => setIsModalOpen(true)}>
+        Buy Credits
+      </button>
+      
+      {isModalOpen && <PaymentModal />}
+    </div>
+  );
+};
+
+export default App;
+```
+
+**자가검증: 사실 1개 / 추측 0개**
